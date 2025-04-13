@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Future - Eco-Friendly Products</title>
+    <style>
+        :root {
+            --main-bg-color: #e9f2d9;
+            --text-color: #3c2415;
+            --button-color: #3b4925;
+            --button-text: #ffffff;
+            --section-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 100px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+        
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero p {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .btn {
+            background-color: var(--button-color);
+            color: var(--button-text);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 0;
+        }
+        
+        /* Decorative elements */
+        .leaf-decoration {
+            position: relative;
+        }
+        
+        .leaf {
+            position: absolute;
+            width: 50px;
+            opacity: 0.7;
+        }
+        
+        .leaf-top-left {
+            top: 0;
+            left: 0;
+        }
+        
+        .leaf-top-right {
+            top: 0;
+            right: 0;
+            transform: rotate(90deg);
+        }
+        
+        .leaf-bottom-left {
+            bottom: -20px;
+            left: 0;
+            transform: rotate(-90deg);
+        }
+        
+        .leaf-bottom-right {
+            bottom: -20px;
+            right: 0;
+            transform: rotate(180deg);
+        }
+        
+        /* Why Choose Section */
+        .why-choose {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--section-bg);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .benefit {
+            text-align: center;
+            max-width: 150px;
+        }
+        
+        .benefit img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .benefit h3 {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .benefit p {
+            font-size: 12px;
+        }
+        
+        /* Mission Section */
+        .mission {
+            text-align: center;
+            padding: 30px 0;
+            background-color: var(--section-bg);
+            margin-bottom: 20px;
+        }
+        
+        .mission p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+        
+        /* Products Section */
+        .products {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .product {
+            display: flex;
+            align-items: center;
+            background-color: var(--section-bg);
+        }
+        
+        .product-image {
+            width: 20%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+            width: 60%;
+        }
+        
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+        
+        .product-subtitle {
+            font-size: 16px;
+            font-weight: normal;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--button-color);
+            color: var(--button-color);
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+        
+        .footer-hero {
+            background-color: var(--section-bg);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-hero-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-hero-text {
+            flex: 1;
+        }
+        
+        .footer-hero-text h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-hero-text p {
+            font-size: 14px;
+        }
+        
+        .footer-hero-image {
+            flex: 1;
+            max-width: 300px;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+        
+        .copyright {
+            color: var(--text-color);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images\bb5ed272-528c-4f81-bba0-e77d84917054.png" alt="Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <img src="images\User Profile Focus.png" alt="Search" class="icon">
+                <img src="images\Shopping Cart 2.png" alt="Cart" class="icon">
+            </div>
+        </header>
+    
+            <center>
+            <h1>SUSTAINABLE FUTURE</h1>
+            <p>Small steps toward better planet</p>
+            <a href="#" class="btn">Read More</a>
+        </center>
+        
+        <section class="why-choose">
+            <h2 class="section-title">WHY CHOOSE OUR PRODUCTS?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <img src="images\Group 9.png" alt="Eco Friendly">
+                    <h3>ECO-FRIENDLY</h3>
+                    <p>Our products are made from sustainable materials that won't harm the planet</p>
+                </div>
+                <div class="benefit">
+                    <img src="images\Group 8.png"alt="Certified">
+                    <h3>CERTIFIED SUSTAINABLE</h3>
+                    <p>All products meet rigorous environmental and ethical standards</p>
+                </div>
+                <div class="benefit">
+                    <img src="images\Octicons.png" alt="Plastic Free">
+                    <h3>PLASTIC-FREE</h3>
+                    <p>Zero plastic packaging for a cleaner planet and healthier oceans</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mission">
+            <h2 class="section-title">OUR MISSION</h2>
+            <p>At Sustainable Future, we're dedicated to providing eco-friendly alternatives to everyday products. Our mission is to reduce environmental impact one product at a time.</p>
+        </section>
+        
+        <section class="products">
+            <div class="product">
+                <img src= "images\BOTTLE 3.png"alt="Eco Bottle" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">ECO BOTTLE</h2>
+                    <h3 class="product-subtitle">Eco Bottle:</h3>
+                    <p class="product-description">Our innovative bamboo water bottle that keeps your beverages at the perfect temperature while reducing plastic waste.</p>
+                    <div class="buttons">
+                        <a href="#" class="btn">SHOP NOW</a>
+                        <a href="#" class="btn btn-secondary">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="images\download 1.png" alt="Wood Toothbrush" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">WOOD TOOTHBRUSH</h2>
+                    <h3 class="product-subtitle">Palm roots:</h3>
+                    <p class="product-description">100% natural bamboo toothbrushes with biodegradable handles for zero-waste cleaning.</p>
+                    <div class="buttons">
+                        <a href="#" class="btn">SHOP NOW</a>
+                        <a href="#" class="btn btn-secondary">ADD TO CART</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="images\71Ljx0Qz6hL 1.png" alt="Palm Plates" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-title">PALM PLATES</h2>
+                    <h3 class="product-subtitle">Palm Plates:</h3>
+                    <p class="product-description">Made from fallen palm leaves, these plates are 100% biodegradable and compostable.</p>
+                    <div class="buttons">
+                        <a href="#" class="btn">SHOP NOW</a>
+                        <a href="#" class="btn btn-secondary">ADD TO CART</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-hero">
+                <div class="footer-hero-content">
+                    <div class="footer-hero-text">
+                        <h3>Start Small, Go Sustainable - Journey to a Plastic-Free Future</h3>
+                        <p>Every big change begins with a small step - our selection of eco-friendly products is designed to help you make those steps at home.</p>
+                        <p>Sustainability isn't just a trend, it's a lifestyle choice - and we're here to make sure you can find exactly what you need to make that choice.</p>
+                    </div>
+                    <img src="images\family-nature-together-back-view-running-89802129 1.png" alt="Sunset" class="footer-hero-image">
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="copyright">
+                    © Green Store 2023
+                </div>
+                <div class="social-icons">
+                    <p><b>Follow us on:</b></p>
+                    <img src="images\Vector1.png" alt="Facebook" class="social-icon">
+                    <img src="images\Vector.png" alt="Instagram" class="social-icon">
+                    <img src="images\Vector2.png" alt="Twitter" class="social-icon">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
